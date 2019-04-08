@@ -49,25 +49,28 @@ public class Calculadora_Avancada {
             dnumeros1 = Double.parseDouble(strnumeros1);
             dnumeros2 = Double.parseDouble(strnumeros2);
         }catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Não são doubles");
             return;
         }
         
         
         
-        
+        /*
         System.out.println("Limite1 : " + limite1 + "\nLimite2: " + limite2);
-        System.out.println("Numeros1 : " + strnumeros1 + "\nNumeros2: " + strnumeros2);
+        System.out.println("Numeros1 : " + dnumeros1 + "\nNumeros2: " + dnumeros2);
+        */
         
         switch(chTexto[(limite1+1)]){
             case '+':
-                //System.out.println("Resultado da soma: " + Adicao.somar(dnumeros1);
+                //System.out.println("Resultado da soma: " + Adicao.somar(dnumeros1, dnumeros2);
                 break;
             case '-':
+                //System.out.println("Resultado da subtração: " + Subtracao.subtrair(dnumeros1, dnumeros2);
                 break;
             case '*':
+                //System.out.println("Resultado da multiplicação: " + Multiplicacao.multiplicar(dnumeros1, dnumeros2);
                 break;
             case '/':
+                //System.out.println("Resultado da divisão: " + Divisao.dividir(dnumeros1, dnumeros2);
                 break;
             default: 
                 break;             
