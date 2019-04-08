@@ -6,6 +6,10 @@
 package calculadora_avancada;
 
 import javax.swing.JOptionPane;
+import static calculadora_avancada.Adicao.somar;
+import static calculadora_avancada.Subtracao.subtrair;
+import static calculadora_avancada.Multiplicacao.multiplicar;
+import static calculadora_avancada.Divisao.dividir;
 
 /**
  *
@@ -17,18 +21,6 @@ public class Calculadora_Avancada {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*
-        //Básico:
-        Adicao adicao = new Adicao();
-        Subtracao subtracao = new subtracao();
-        Multiplicacao multiplicacao = new Multiplicacao();
-        Divisao divisao = new Divisao();
-        //Avançado:
-        Raiz raiz = new Raiz();
-        Logaritmo logaritmo = new Logaritmo();
-        Exponencial exponencial = new Exponencial();
-        Porcentagem porcentagem = new Porcentagem();
-        */
         
         String strTexto;
         char[] chTexto;
@@ -42,6 +34,7 @@ public class Calculadora_Avancada {
         
         int i=0;
         while(i<strTexto.length()){
+            //System.out.println( i + "  " + chTexto[i] + " ");
             if(chTexto[i] == ' '){
                 guardar = i;
                 if(!segundo){
@@ -69,20 +62,21 @@ public class Calculadora_Avancada {
         //System.out.println("Limite1 : " + limite1 + "\nLimite2: " + limite2);
         //System.out.println("Numeros1 : " + dnumeros1 + "\nNumeros2: " + dnumeros2);
         
-       /*
+       
         switch(chTexto[(limite1+1)]){
             case '+':
-                System.out.println("Resultado da soma: " + adicao.somar(dnumeros1, dnumeros2));
+                System.out.println("Resultado da soma: " + somar(dnumeros1, dnumeros2));
                 break;
             case '-':
-                System.out.println("Resultado da subtração: " + subtracao.subtrair(dnumeros1, dnumeros2));
+                System.out.println("Resultado da subtração: " + subtrair(dnumeros1, dnumeros2));
                 break;
             case '*':
-                System.out.println("Resultado da multiplicação: " + multiplicacao.multiplicar(dnumeros1, dnumeros2));
+                System.out.println("Resultado da multiplicação: " + multiplicar(dnumeros1, dnumeros2));
                 break;
             case '/':
-                System.out.println("Resultado da divisão: " + divisao.dividir(dnumeros1, dnumeros2));
+                System.out.println("Resultado da divisão: " + dividir(dnumeros1, dnumeros2));
                 break;
+                /*
             case 'v':
                 System.out.println("Resultado da raiz quadrada: " + raiz.raizQuadrada(dnumeros1, dnumeros2));
                 break;
@@ -95,10 +89,10 @@ public class Calculadora_Avancada {
             case '%':
                 System.out.println("Resultado dessa porcentagem: " + porcentagem.porcentagem(dnumeros1, dnumeros2));
                 break;
+*/
             default: 
                 break;             
         }
-        */
         
     }
     
