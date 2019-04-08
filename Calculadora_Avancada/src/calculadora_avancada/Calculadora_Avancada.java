@@ -10,6 +10,10 @@ import static calculadora_avancada.Adicao.somar;
 import static calculadora_avancada.Subtracao.subtrair;
 import static calculadora_avancada.Multiplicacao.multiplicar;
 import static calculadora_avancada.Divisao.dividir;
+import static calculadora_avancada.Porcentagem.porcentagem;
+import static calculadora_avancada.Raiz.raiz;
+import static calculadora_avancada.Exponencial.exponencial;
+//import static calculadora_avancada.Logaritmo.logaritmo;
 
 /**
  *
@@ -76,20 +80,20 @@ public class Calculadora_Avancada {
             case '/':
                 System.out.println("Resultado da divisão: " + dividir(dnumeros1, dnumeros2));
                 break;
-                /*
+                
             case 'v':
-                System.out.println("Resultado da raiz quadrada: " + raiz.raizQuadrada(dnumeros1, dnumeros2));
+                System.out.println("Resultado da raiz quadrada: " + raiz(dnumeros1, dnumeros2));
                 break;
             case 'l':
-                System.out.println("Resultado desse logaritmo: " + logaritmo.logaritmo(dnumeros1, dnumeros2));
+                //System.out.println("Resultado desse logaritmo: " + logaritmo(dnumeros1, dnumeros2));
                 break;
             case '^':
-                System.out.println("Resultado dessa exponenciação: " + exponencial.exponencial(dnumeros1, dnumeros2));
+                System.out.println("Resultado dessa exponenciação: " + exponencial(dnumeros1, dnumeros2));
                 break;
             case '%':
-                System.out.println("Resultado dessa porcentagem: " + porcentagem.porcentagem(dnumeros1, dnumeros2));
+                System.out.println("Resultado dessa porcentagem: " + porcentagem(dnumeros1, dnumeros2));
                 break;
-*/
+
             default: 
                 break;             
         }
