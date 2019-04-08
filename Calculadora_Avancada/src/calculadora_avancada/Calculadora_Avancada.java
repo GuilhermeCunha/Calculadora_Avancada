@@ -30,7 +30,7 @@ public class Calculadora_Avancada {
         
         int i=0;
         while(i<strTexto.length()){
-            System.out.println( i + "  " + chTexto[i] + " ");
+            //System.out.println( i + "  " + chTexto[i] + " ");
             if(chTexto[i] == ' '){
                 guardar = i;
                 if(!segundo){
@@ -54,10 +54,9 @@ public class Calculadora_Avancada {
         
         
         
-        /*
-        System.out.println("Limite1 : " + limite1 + "\nLimite2: " + limite2);
-        System.out.println("Numeros1 : " + dnumeros1 + "\nNumeros2: " + dnumeros2);
-        */
+        
+        //System.out.println("Limite1 : " + limite1 + "\nLimite2: " + limite2);
+       // System.out.println("Numeros1 : " + dnumeros1 + "\nNumeros2: " + dnumeros2);
         
         switch(chTexto[(limite1+1)]){
             case '+':
