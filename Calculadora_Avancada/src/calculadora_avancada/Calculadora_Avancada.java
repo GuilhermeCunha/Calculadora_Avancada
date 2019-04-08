@@ -17,10 +17,16 @@ public class Calculadora_Avancada {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Básico:
         Adicao adicao = new Adicao();
         Subtracao subtracao = new subtracao();
         Multiplicacao multiplicacao = new Multiplicacao();
         Divisao divisao = new Divisao();
+        //Avançado:
+        Raiz raiz = new Raiz();
+        Logaritmo logaritmo = new Logaritmo();
+        Exponencial exponencial = new Exponencial();
+        Porcentagem porcentagem = new Porcentagem();
         
         String strTexto;
         char[] chTexto;
@@ -74,6 +80,18 @@ public class Calculadora_Avancada {
                 break;
             case '/':
                 System.out.println("Resultado da divisão: " + divisao.dividir(dnumeros1, dnumeros2));
+                break;
+            case 'v':
+                System.out.println("Resultado da raiz quadrada: " + raiz.raizQuadrada(dnumeros1, dnumeros2));
+                break;
+            case 'l':
+                System.out.println("Resultado desse logaritmo: " + logaritmo.logaritmo(dnumeros1, dnumeros2));
+                break;
+            case '^':
+                System.out.println("Resultado dessa exponenciação: " + exponencial.exponencial(dnumeros1, dnumeros2));
+                break;
+            case '%':
+                System.out.println("Resultado dessa porcentagem: " + porcentagem.porcentagem(dnumeros1, dnumeros2));
                 break;
             default: 
                 break;             
