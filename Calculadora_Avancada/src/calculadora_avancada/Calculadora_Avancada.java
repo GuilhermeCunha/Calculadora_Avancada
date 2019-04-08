@@ -17,6 +17,7 @@ public class Calculadora_Avancada {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        /*
         //Básico:
         Adicao adicao = new Adicao();
         Subtracao subtracao = new subtracao();
@@ -27,12 +28,12 @@ public class Calculadora_Avancada {
         Logaritmo logaritmo = new Logaritmo();
         Exponencial exponencial = new Exponencial();
         Porcentagem porcentagem = new Porcentagem();
+        */
         
         String strTexto;
         char[] chTexto;
         String strnumeros1, strnumeros2;
         double dnumeros1, dnumeros2;
-        
         strTexto = JOptionPane.showInputDialog("Digite o que pretende calcular: \n");
         chTexto = strTexto.toCharArray();
         
@@ -66,8 +67,9 @@ public class Calculadora_Avancada {
         
         
         //System.out.println("Limite1 : " + limite1 + "\nLimite2: " + limite2);
-       // System.out.println("Numeros1 : " + dnumeros1 + "\nNumeros2: " + dnumeros2);
+        //System.out.println("Numeros1 : " + dnumeros1 + "\nNumeros2: " + dnumeros2);
         
+       /*
         switch(chTexto[(limite1+1)]){
             case '+':
                 System.out.println("Resultado da soma: " + adicao.somar(dnumeros1, dnumeros2));
@@ -96,6 +98,7 @@ public class Calculadora_Avancada {
             default: 
                 break;             
         }
+        */
         
     }
     
