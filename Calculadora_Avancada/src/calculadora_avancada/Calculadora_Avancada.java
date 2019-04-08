@@ -18,11 +18,9 @@ public class Calculadora_Avancada {
      */
     public static void main(String[] args) {
         Adicao adicao = new Adicao();
-        /*
         Subtracao subtracao = new subtracao();
         Multiplicacao multiplicacao = new Multiplicacao();
         Divisao divisao = new Divisao();
-        */
         
         String strTexto;
         char[] chTexto;
@@ -37,7 +35,6 @@ public class Calculadora_Avancada {
         
         int i=0;
         while(i<strTexto.length()){
-            //System.out.println( i + "  " + chTexto[i] + " ");
             if(chTexto[i] == ' '){
                 guardar = i;
                 if(!segundo){
@@ -67,16 +64,16 @@ public class Calculadora_Avancada {
         
         switch(chTexto[(limite1+1)]){
             case '+':
-                System.out.println("Resultado da soma: " + adicao.somar(dnumeros1, dnumeros2);
+                System.out.println("Resultado da soma: " + adicao.somar(dnumeros1, dnumeros2));
                 break;
             case '-':
-                //System.out.println("Resultado da subtração: " + subtracao.subtrair(dnumeros1, dnumeros2);
+                System.out.println("Resultado da subtração: " + subtracao.subtrair(dnumeros1, dnumeros2));
                 break;
             case '*':
-                //System.out.println("Resultado da multiplicação: " + multiplicacao.multiplicar(dnumeros1, dnumeros2);
+                System.out.println("Resultado da multiplicação: " + multiplicacao.multiplicar(dnumeros1, dnumeros2));
                 break;
             case '/':
-                //System.out.println("Resultado da divisão: " + divisao.dividir(dnumeros1, dnumeros2);
+                System.out.println("Resultado da divisão: " + divisao.dividir(dnumeros1, dnumeros2));
                 break;
             default: 
                 break;             
