@@ -17,12 +17,19 @@ public class Calculadora_Avancada {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Adicao adicao = new Adicao();
+        /*
+        Subtracao subtracao = new subtracao();
+        Multiplicacao multiplicacao = new Multiplicacao();
+        Divisao divisao = new Divisao();
+        */
+        
         String strTexto;
         char[] chTexto;
         String strnumeros1, strnumeros2;
         double dnumeros1, dnumeros2;
         
-        strTexto = "2524 + 2000";
+        strTexto = JOptionPane.showInputDialog("Digite o que pretende calcular: \n");
         chTexto = strTexto.toCharArray();
         
         int limite1=0, limite2=0, guardar;
@@ -60,16 +67,16 @@ public class Calculadora_Avancada {
         
         switch(chTexto[(limite1+1)]){
             case '+':
-                //System.out.println("Resultado da soma: " + Adicao.somar(dnumeros1, dnumeros2);
+                System.out.println("Resultado da soma: " + adicao.somar(dnumeros1, dnumeros2);
                 break;
             case '-':
-                //System.out.println("Resultado da subtração: " + Subtracao.subtrair(dnumeros1, dnumeros2);
+                //System.out.println("Resultado da subtração: " + subtracao.subtrair(dnumeros1, dnumeros2);
                 break;
             case '*':
-                //System.out.println("Resultado da multiplicação: " + Multiplicacao.multiplicar(dnumeros1, dnumeros2);
+                //System.out.println("Resultado da multiplicação: " + multiplicacao.multiplicar(dnumeros1, dnumeros2);
                 break;
             case '/':
-                //System.out.println("Resultado da divisão: " + Divisao.dividir(dnumeros1, dnumeros2);
+                //System.out.println("Resultado da divisão: " + divisao.dividir(dnumeros1, dnumeros2);
                 break;
             default: 
                 break;             
