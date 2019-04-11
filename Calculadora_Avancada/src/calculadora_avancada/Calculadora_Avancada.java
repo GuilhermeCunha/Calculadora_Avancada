@@ -6,6 +6,8 @@
 package calculadora_avancada;
 
 import javax.swing.JOptionPane;
+import java.util.Scanner;
+
 import static calculadora_avancada.Adicao.somar;
 import static calculadora_avancada.Subtracao.subtrair;
 import static calculadora_avancada.Multiplicacao.multiplicar;
@@ -13,7 +15,8 @@ import static calculadora_avancada.Divisao.dividir;
 import static calculadora_avancada.Porcentagem.porcentagem;
 import static calculadora_avancada.Raiz.raiz;
 import static calculadora_avancada.Exponencial.exponencial;
-//import static calculadora_avancada.Logaritmo.logaritmo;
+import static calculadora_avancada.Logaritmo.logaritmo;
+
 
 /**
  *
@@ -25,40 +28,29 @@ public class Calculadora_Avancada {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Scanner entrada = new Scanner(System.in);
+        String[] strNumeros;
         String strTexto;
-        char[] chTexto;
-        String strnumeros1, strnumeros2;
-        double dnumeros1, dnumeros2;
-        strTexto = JOptionPane.showInputDialog("Digite o que pretende calcular: \n");
-        chTexto = strTexto.toCharArray();
+        double dnumeros1 = 0.0, dnumeros2 = 0.0;
         
-        int limite1=0, limite2=0, guardar;
-        boolean segundo = false;
+        boolean teste;
         
-        int i=0;
-        while(i<strTexto.length()){
-            //System.out.println( i + "  " + chTexto[i] + " ");
-            if(chTexto[i] == ' '){
-                guardar = i;
-                if(!segundo){
-                    limite1 = guardar;
-                    segundo = true;
-                }
-                if(segundo && guardar!=limite1){
-                    limite2 = guardar;
-                }
+        do{
+            teste = false;
+            System.out.println("Digite o que pretende calcular: \n");
+            strTexto = entrada.nextLine();
+            strNumeros = strTexto.split(" ");
+            
+            try{
+                dnumeros1 = Double.parseDouble(strNumeros[0]);
+                dnumeros2 = Double.parseDouble(strNumeros[2]);
+            }catch(NumberFormatException e){
+                System.out.println("O formato do calculo deve ser :\n<NUMERO(S)><ESPAÇO><OPERAÇÃO><ESPAÇO><NUMERO(S)>");
+                teste = true;
             }
-            i++;
-        }
-        strnumeros1 = strTexto.substring(0,(limite1));
-        strnumeros2 = strTexto.substring((limite1+2),strTexto.length());
-        try{
-            dnumeros1 = Double.parseDouble(strnumeros1);
-            dnumeros2 = Double.parseDouble(strnumeros2);
-        }catch(NumberFormatException e){
-            return;
-        }
+            
+        }while(teste);
+        
         
         
         
@@ -67,37 +59,37 @@ public class Calculadora_Avancada {
         //System.out.println("Numeros1 : " + dnumeros1 + "\nNumeros2: " + dnumeros2);
         
        
-        switch(chTexto[(limite1+1)]){
-            case '+':
+        switch(strNumeros[1]){
+            case "+":
                 System.out.println("Resultado da soma: " + somar(dnumeros1, dnumeros2));
                 break;
-            case '-':
+            case "-":
                 System.out.println("Resultado da subtração: " + subtrair(dnumeros1, dnumeros2));
                 break;
-            case '*':
+            case "*":
                 System.out.println("Resultado da multiplicação: " + multiplicar(dnumeros1, dnumeros2));
                 break;
-            case '/':
+            case "/":
                 System.out.println("Resultado da divisão: " + dividir(dnumeros1, dnumeros2));
                 break;
-                
-            case 'v':
+              
+            case "v":
                 System.out.println("Resultado da raiz quadrada: " + raiz(dnumeros1, dnumeros2));
                 break;
-            case 'l':
+            case "l":
                 //System.out.println("Resultado desse logaritmo: " + logaritmo(dnumeros1, dnumeros2));
                 break;
-            case '^':
+            case "^":
                 System.out.println("Resultado dessa exponenciação: " + exponencial(dnumeros1, dnumeros2));
                 break;
-            case '%':
+            case "%":
                 System.out.println("Resultado dessa porcentagem: " + porcentagem(dnumeros1, dnumeros2));
                 break;
-
+            
             default: 
                 break;             
         }
-        
+      
     }
     
 }
