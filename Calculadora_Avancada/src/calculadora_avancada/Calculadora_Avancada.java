@@ -5,7 +5,6 @@
  */
 package calculadora_avancada;
 
-import javax.swing.JOptionPane;
 import java.util.Scanner;
 
 import static calculadora_avancada.Adicao.somar;
@@ -77,7 +76,7 @@ public class Calculadora_Avancada {
                 System.out.println("Resultado da raiz quadrada: " + raiz(dnumeros1, dnumeros2));
                 break;
             case "l":
-                //System.out.println("Resultado desse logaritmo: " + logaritmo(dnumeros1, dnumeros2));
+                System.out.println("Resultado desse logaritmo: " + logaritmo(dnumeros1, dnumeros2));
                 break;
             case "^":
                 System.out.println("Resultado dessa exponenciação: " + exponencial(dnumeros1, dnumeros2));
